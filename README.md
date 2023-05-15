@@ -1,3 +1,5 @@
+# 
+
 # Những khó khăn phặp phải
 1. Lỗi đường dẫn tới ảnh
 - Tạo file react-app-env.d.ts
@@ -22,3 +24,6 @@ npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/stack
 npx expo install react-native-gesture-handler
 ```
+
+# Tài liệu tham khảo
+[Link youtube](https://www.youtube.com/watch?v=68l7wyHw97Y)
