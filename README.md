@@ -24,6 +24,18 @@ npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/stack
 npx expo install react-native-gesture-handler
 ```
+4. react-native-reanimated-bottom-sheet
+
+Thành phần kéo trượt lên xuống giống kiểu iphone hay các diện thoại hiện đại ngày nay
+[Link Git](https://github.com/osdnk/react-native-reanimated-bottom-sheet)
+```
+npm install reanimated-bottom-sheet &&
+expo install react-native-gesture-handler react-native-reanimated
+```
+
+Thêm config trong file babel.config.js
+
+
 
 # Tài liệu tham khảo
 [Link youtube](https://www.youtube.com/watch?v=68l7wyHw97Y)
