@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components/native";
 import { colors } from "../colors";
-import { ScreenWidth } from "../shared";
+import { ScreenHeight, ScreenWidth } from "../shared";
 import { CardProps } from "./types";
 
 // Image
@@ -12,7 +12,7 @@ import SmallText from "../Texts/SmallText";
 
 
 const CardBackground = styled.ImageBackground({
-    height: `${ScreenWidth * 0.5}px`,
+    height: `${ScreenHeight * 0.22}px`,
     width: `${ScreenWidth * 0.67}px`,
     resizeMode: 'cover',
     backgroundColor: colors.accent,

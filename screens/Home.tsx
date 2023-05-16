@@ -110,9 +110,9 @@ const Home: FunctionComponent = () => {
     return (
         <HomeContainer>
             <StatusBar style="dark"/>
-            {/* <CardSection data={cardData} />
+            <CardSection data={cardData} />
             <TransactionSection data={transactionData} />
-            <SendMoneySection data={sendMoneyData}/> */}
+            {/* <SendMoneySection data={sendMoneyData}/> */}
         </HomeContainer>
     )
 }
