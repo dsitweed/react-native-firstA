@@ -52,6 +52,7 @@ const Logo = styled.Image({
 
 const CartItem: FunctionComponent<CardProps> = (props) => {
     // configuring navigation
+    // This is important and most difficult
     const navigation= useNavigation<HomeScreenProps["navigation"]>();
 
     // Move to balance page
