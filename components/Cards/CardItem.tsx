@@ -57,7 +57,7 @@ const CartItem: FunctionComponent<CardProps> = (props) => {
     return (
         <CardBackground source={card_background}>
             <CardTouchable
-                underlayColor={colors.secondary} onPress={handlePress}
+                underlayColor={colors.white} onPress={handlePress}
             >
                 <TouchableView>
                     <CardRow>

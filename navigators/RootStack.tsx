@@ -11,10 +11,16 @@ import Greeting from "../components/Header/Greeting";
 import Profile from "../components/Header/Profile";
 // Customer component
 import Avatar from '../assets/avi/avatar.png';
+// For balance screen
+import { CardProps } from "../components/Cards/types";
+import Balance from "../screens/Balance";
+// Balance back icon
+import { Ionicons } from "@expo/vector-icons";
 
 export type RootStackParamList= {
   Welcome: undefined;
   Home: undefined;
+  Balance: CardProps;
 }
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -24,7 +30,7 @@ const RootStack: FunctionComponent = () => {
   return(
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="Balance"
         screenOptions={{
           headerStyle: {
             backgroundColor: colors.grayLight,
@@ -62,6 +68,24 @@ const RootStack: FunctionComponent = () => {
               />
             ),
           }}
+        />
+        <Stack.Screen
+          name="Balance"
+          component={Balance}
+          options={({ route }) => ({
+            headerTitle: route?.params?.alias,
+            headerTitleAlign: 'center',
+            headerBackImage: (props) => (
+              <Ionicons
+                name="chevron-back"
+                size={25}
+                color={colors.secondary}
+              />
+            ),
+            headerLeftContainerStyle: {
+              paddingLeft: 0
+            }
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>
