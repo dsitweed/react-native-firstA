@@ -15,6 +15,11 @@ import portrait1 from '../assets/portraits/1.jpg';
 import portrait2 from '../assets/portraits/2.jpg';
 import portrait3 from '../assets/portraits/3.jpg';
 
+// Types
+import { StackScreenProps } from "@react-navigation/stack";
+import { RootStackParamList } from "../navigators/RootStack";
+
+export type HomeScreenProps = StackScreenProps<RootStackParamList, "Home">;
 
 const HomeContainer = styled(Container)({
     backgroundColor: colors.grayLight,
@@ -22,26 +27,26 @@ const HomeContainer = styled(Container)({
     flex: 1
 });
 
-const Home: FunctionComponent = () => {
+const Home: FunctionComponent<HomeScreenProps> = () => {
     const cardData = [
         {
             id: 1,
             accountNo: "19297903025",
-            balance: 20000.15,
+            balance: 2000.15,
             alias: "Work debit",
             logo: logo1,
         },
         {
             id: 2,
             accountNo: "195028873003",
-            balance: 20000.15,
+            balance: 9000.12,
             alias: "Work debit",
             logo: logo2,
         },
         {
             id: 3,
             accountNo: "753157900844",
-            balance: 20000.15,
+            balance: 21000.2,
             alias: "School Prepaid",
             logo: logo2,
         },

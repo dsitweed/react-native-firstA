@@ -10,6 +10,9 @@ import RegularText from "../Texts/RegularText";
 import { View } from "react-native";
 import SmallText from "../Texts/SmallText";
 
+// Navigation
+import { useNavigation } from "@react-navigation/native";
+import { HomeScreenProps } from "../../screens/Home";
 
 const CardBackground = styled.ImageBackground({
     height: `${ScreenHeight * 0.22}px`,
@@ -48,10 +51,12 @@ const Logo = styled.Image({
 });
 
 const CartItem: FunctionComponent<CardProps> = (props) => {
-    console.log(props.logo);
+    // configuring navigation
+    const navigation= useNavigation<HomeScreenProps["navigation"]>();
 
+    // Move to balance page
     const handlePress = () => {
-
+        navigation.navigate("Balance", {...props});
     }
 
     return (

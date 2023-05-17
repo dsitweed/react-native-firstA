@@ -9,7 +9,9 @@ import background from '../assets/bgs/background_v1.png';
 import BigText from "../components/Texts/BigText";
 import SmallText from "../components/Texts/SmallText";
 import RegularButton from "../components/Buttons/RegularButton";
-
+// Types
+import { RootStackParamList } from "../navigators/RootStack";
+import { StackScreenProps } from "@react-navigation/stack";
 // Customer components
 
 const WelcomeContainer = styled(Container)({
@@ -38,7 +40,10 @@ const BottomSection = styled.View({
   justifyContent: 'flex-end',
 });
 
-const Welcome: FunctionComponent = () => {
+
+type Props = StackScreenProps<RootStackParamList, "Welcome">;
+
+const Welcome: FunctionComponent<Props> = ({ navigation }) => {
   return(
     <>
       <WelcomeContainer>
@@ -52,7 +57,7 @@ const Welcome: FunctionComponent = () => {
           <SmallText textStyles={{width: '70%', marginBottom: '25px'}}>
             Best payment method, connects your money to your friend
           </SmallText>
-          <RegularButton onPress={() => {}}>
+          <RegularButton onPress={() => {navigation.navigate('Home')}}>
             Get Started
           </RegularButton>
         </BottomSection>
